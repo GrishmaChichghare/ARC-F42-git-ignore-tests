@@ -1,17 +1,13 @@
+import { Component } from "react";
 
-import './App.css';
-   
-const App = ()=>{
-  // let name = "Rajesh";
-  console.log("Hello React");
+class App extends Component{
 
-  return(
-    // <h1> Hello App : {name}</h1>
-    <>
-      <h1>Hello App</h1>
-      <h3>Hello Class</h3>
-    </>
-  )
+  render(){
+    return(
+      <>
+      <h1>Hello Class Components</h1>
+      </>
+    )
+  }
 }
 
-export default App;
