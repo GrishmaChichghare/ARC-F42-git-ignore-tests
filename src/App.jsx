@@ -1,8 +1,6 @@
 
 import "./App.css";
 import Categories from "./components/categories";
-import Nav from "./components/nav";
-import SubCategories from "./components/subCategories";
 
 const usersDetails = [
     {
@@ -15,7 +13,7 @@ const usersDetails = [
 {
     id : 2,
     name : "vishnu",
-    status : "active",
+    status : "deactive",
     email : "vishnu@gmail.com",
     domain : "Fullstack"
 },
@@ -36,29 +34,11 @@ const usersDetails = [
 ]
 const MyApp = () => {
 
-    const displayList = (each) => {
-        const { id, name, email, domain } = each;
-
-        return(
-            <li key = {id} className="my-list p-3 shadow w-50 rounded-lg">
-                
-                <div className="profile">
-                    <h3>{name[0]}</h3>
-                </div>
-                <div className="my-content border-left border-danger ml-3 p-3">
-                    <h3>{name}</h3>
-                    <b>Email: {email}</b>
-                    <br />
-                    <span>Domain: {domain}</span>
-                </div>
-            </li>
-        ) 
-        
-    }
+    
     return(
       <ul className="main-cont">
         {
-            usersDetails.map( each => displayList(each))
+            usersDetails.map( each => <Categories key = {each.id} user = {each}/>)
         }
     </ul>
     )
