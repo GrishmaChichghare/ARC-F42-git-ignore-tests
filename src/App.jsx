@@ -1,12 +1,11 @@
-
+import { useState}from "react";
 import "./App.css";
 
 const MyApp = () => {
-    let heading = "Hello World";
+    const [heading, setHeading] = useState("Hello World");
 
     const onChangeHeading = () => {
-        heading = "Heading changed";
-        console.log(heading);
+        setHeading("Heading has been changed");
     }
 
     return (
